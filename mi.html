@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Store</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+        .nav-left, .nav-right {
+            display: flex;
+            align-items: center;
+        }
+        .nav-left a, .nav-right a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 15px;
+        }
+        .nav-left a:first-child {
+            color: #ff6900;
+            font-weight: bold;
+        }
+        .logo {
+            width: 28px;
+            height: 28px;
+            background-color: #ff6900;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .product-card {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            background-color: #f5f5f5;
+        }
+        .product-info {
+            padding: 15px;
+        }
+        .product-name {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .product-price {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .current-price {
+            font-weight: bold;
+        }
+        .original-price {
+            text-decoration: line-through;
+            color: #999;
+        }
+        .discount {
+            background-color: #fff0e6;
+            color: #ff6900;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.8em;
+        }
+        .banner {
+            background-color: #fff0e6;
+            border-radius: 8px;
+            padding: 30px;
+            margin: 30px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .banner-content h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .banner-content p {
+            margin-bottom: 20px;
+        }
+        .btn {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .banner-image {
+            width: 400px;
+            height: 200px;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="nav-left">
+                    <div class="logo">
+                        <img src="https://i.pinimg.com/originals/b5/2c/6d/b52c6d4e3fc09609c280957e4b9ec79f.png" alt="logo" class="logo">
+                    </div>
+                    <a href="#">Store</a>
+                    <a href="#">Phone</a>
+                    <a href="#">TV & Smart Home</a>
+                    <a href="#">Tablet</a>
+                    <a href="#">LifeStyle</a>
+                </div>
+                <div class="nav-right">
+                    <a href="#">Discover</a>
+                    <a href="#">Support</a>
+                    <a href="#">Search</a>
+                    <a href="#">Cart</a>
+                    <a href="#">Account</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="product-grid">
+            <div class="product-card">
+                <img src="https://www.zopic.in/wp-content/uploads/2023/04/zopic-Redmi-Earbuds-2C-earbuds-4.webp" alt="Redmi Earphones" class="product-image">
+                <div class="product-info">
+                    <div class="product-name">Redmi Earphones</div>
+                    <div class="product-price">
+                        <span class="current-price">₹449</span>
+                        <span class="original-price">₹599</span>
+                        <span class="discount">25% off</span>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202002/headphone.png?size=690:388" alt="Mi Dual Driver In-ear Earphones" class="product-image">
+                <div class="product-info">
+                    <div class="product-name">Mi Dual Driver In-ear Earphones</div>
+                    <div class="product-price">
+                        <span class="current-price">₹799</span>
+                        <span class="original-price">₹999</span>
+                        <span class="discount">20% off</span>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://cdn.shopify.com/s/files/1/0245/9382/5867/products/mi-wireless-bluetooth-headphones-blue-redmi-sonicbass-wireless-earphones-blue-inlyej02ls-28206054146123_300x@2x.jpg?v=1634378415" alt="Redmi Sonic Bass Wireless Earphones 2" class="product-image">
+                <div class="product-info">
+                    <div class="product-name">Redmi Sonic Bass Wireless Earphones 2</div>
+                    <div class="product-price">
+                        <span class="current-price">₹1,299</span>
+                        <span class="original-price">₹2,999</span>
+                        <span class="discount">54% off</span>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://m.media-amazon.com/images/I/81qoMIV01nS.jpg" alt="Mi Portable Bluetooth Speaker (16W)" class="product-image">
+                <div class="product-info">
+                    <div class="product-name">Mi Portable Bluetooth Speaker (16W)</div>
+                    <div class="product-price">
+                        <span class="current-price">₹2,499</span>
+                        <span class="original-price">₹3,499</span>
+                        <span class="discount">28% off</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="banner">
+            <div class="banner-content">
+                <h2>Save Up to 65%</h2>
+                <h3>On Chargers & Cables</h3>
+                <p>Free Delivery on All Products</p>
+                <a href="#" class="btn">Buy Now</a>
+            </div>
+            <div class="banner-image">
+                <img src="https://5.imimg.com/data5/SELLER/Default/2022/4/YC/XM/NH/47719589/mi-mdy-09-ej-10-w-2-a-mobile-charger-with-detachable-cable-500x500.jpg" alt="Chargers & Cables" class="banner-image">
+            </div>
+        </section>
+
+        <section class="product-grid">
+            <div class="product-card">
+                <img src="https://dukaan.b-cdn.net/700x700/webp/upload_file_service/131ebd71-01bf-4d36-a10f-679bdb9202a8/71t25pj-fzl-sy450.jpg" alt="Xiaomi 120W HyperCharge Adapter" class="product-image">
+                <div class="product-info">
+                    <div class="product-name">Xiaomi 120W HyperCharge Adapter</div>
+                    <div class="product-price">
+                        <span class="current-price">₹2,999</span>
+                        <span class="original-price">₹5,999</span>
+                        <span class="discount">50% off</span>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/b4894b7ce71c298bc6a5eb28e3e762c4" alt="Mi 2A Fast Charger with Cable" class="product-image">
+                <div class="product-info">
+                    <div class="product-name">Mi 2A Fast Charger with Cable</div>
+                    <div class="product-price">
+                        <span class="current-price">₹449</span>
+                        <span class="original-price">₹599</span>
+                        <span class="discount">25% off</span>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://fabgizmoz.com/cdn/shop/files/61HGT4Ck89L._SX679.jpg?v=1709728485&width=1445" alt="Xiaomi SonicCharge 2.0 Cable" class="product-image">
+                <div class="product-info">
+                    <div class="product-name">Xiaomi SonicCharge 2.0 Cable</div>
+                    <div class="product-price">
+                        <span class="current-price">₹249</span>
+                        <span class="original-price">₹699</span>
+                        <span class="discount">64% off</span>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://img-prd-pim.poorvika.com/cdn-cgi/image/width=500,height=500,quality=75/product/Mi-18w-dual-port-charger-black-Back-View.png" alt="Mi 18W Dual Port Charger + Mi USB Cable 120cm" class="product-image">
+                <div class="product-info">
+                    <div class="product-name">Mi 18W Dual Port Charger + Mi USB Cable 120cm</div>
+                    <div class="product-price">
+                        <span class="current-price">₹899</span>
+                        <span class="original-price">₹1,399</span>
+                        <span class="discount">35% off</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
